@@ -22,7 +22,7 @@ export function initLogin() {
 
         try {
             const options = makeOptions("POST", loginRequest);
-            const response = await fetch(API_URL + "/login", options).then(handleHttpErrors);
+            const response = await fetch(API_URL + "/auth/login", options).then(handleHttpErrors);
             storeLoginDetails(response);
         } catch (err) {
             console.log(err);
